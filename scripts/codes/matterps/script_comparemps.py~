@@ -1,0 +1,75 @@
+import numpy as np
+import sys
+import os
+import matplotlib.pyplot as mp
+import matplotlib.gridspec as gridspec
+
+from compos import const, matterps, callcamb, camb_interp,growthfactor
+
+f = os.getcwd()
+
+#const.initializecosmo((0.022161+0.11889)/0.677701323/0.677701323, 0.022161/0.677701323/0.677701323, 0.11889 / 0.677701323/0.677701323, 0.677701323, 2.7255/2.7, omq = 1 - (0.0226+0.112)/0.677701323/0.677701323, w_0 = -1, w_1 = 0,n_s = 0.96, kmax = 20 ,callcamb = 1)
+
+#sig8 = callcamb.readsigma8()
+
+const.initializecosmo((0.022161+0.11889)/0.677701323/0.677701323, 0.022161/0.677701323/0.677701323, 0.11889 / 0.677701323/0.677701323, 0.677701323, 2.7255/2.7, omq = 1 - (0.022161+0.11889)/0.677701323/0.677701323, sigma8 = 0.8288 , w_0 = -1, w_1 = 0, n_s = 0.96)
+
+os.chdir(f)
+'''
+k = np.linspace(-4,np.log10(6.71600e+02),10000)
+k = 10 ** k * const.cosmo['h']
+
+p = matterps.normalizedmp(k)
+p_camb = camb_interp.normCAMB_Pk(k)
+np.savetxt('../../results/matterps/mpshu.txt',np.transpose([k / 0.677701323, p * 0.677701323 ** 3]))
+np.savetxt('../../results/matterps/mpscamb.txt',np.transpose([k / 0.677701323, p_camb * 0.677701323 ** 3]))
+'''
+
+kp1 = np.loadtxt('../../results/matterps/test(0.022161,0.11889,0.0,0,67.7701323,2.7255,z=1)_matterpower.dat')
+kp1 = np.transpose(kp1)
+
+kp0 = np.loadtxt('../../results/matterps/test(0.022161,0.11889,0.0,0,67.7701323,2.7255)_matterpower.dat')
+kp0 = np.transpose(kp0)
+
+k = kp1[0]
+k = k * const.cosmo['h']
+zero = np.zeros(np.size(k))
+
+#p1 = matterps.matterpsatz(k,1)
+p0 = matterps.normalizedmp(k)
+p_camb0 = kp0[1] 
+p_camb1 = kp1[1] 
+#p1 = p_camb1[0] / p1[0] * p1
+p0 = p_camb0[0] / p0[0] * p0
+p1 = p0 * growthfactor.growfunc_z(1) ** 2
+
+zero = np.zeros(np.size(k))
+
+gs = gridspec.GridSpec(8, 1)
+gs.update(hspace = 0)
+
+mp.subplot(gs[0:-1])
+
+mp.loglog(k / 0.677701323, p1, label = 'compos(z=1)')
+mp.loglog(k / 0.677701323, p_camb1, label = 'CAMB(z=1)')
+mp.loglog(k / 0.677701323, p0, label = 'compos(z=0)')
+mp.loglog(k / 0.677701323, p_camb0, label = 'CAMB(z=0)')
+mp.legend()
+plottextl = mp.xlim()[0] * 2
+plottextd = mp.ylim()[0] * 2
+#mp.text(plottextl,plottextd, '$h = $'+str(const.cosmo['h'])+', \Omega_bh^2 = '+str()+', \Omega_ch^2 = 0.112$',fontsize = 20)
+mp.ylabel('P(k)(h$^{-3}$Mpc$^{-3}$)')
+mp.xticks([])
+
+mp.subplot(gs[-1])
+ax0 = mp.semilogx(k / 0.677701323, (p0-p_camb0) / p_camb0,label = 'z=0')
+ax1 = mp.semilogx(k / 0.677701323, (p1-p_camb1) / p_camb1,label = 'z=1')
+ax = mp.semilogx(k / 0.677701323, zero, '--')
+mp.legend(fontsize = 8)
+mp.ylim(-0.2,0.2)
+mp.yticks([0.1,0,-0.1],[r'10$\%$',0,r'-10$\%$'])
+mp.xlabel('k (h Mpc$^{-1}$)')
+mp.ylabel('$\Delta$')
+mp.savefig('../../results/matterps/compare.jpg',dpi = 200) 
+mp.savefig('../../results/matterps/compare.pdf')
+mp.show()

@@ -1,0 +1,24 @@
+ WARNING: version_check does not match this CAMB version
+Om_b h^2             =  0.022149
+Om_c h^2             =  0.105884
+Om_nu h^2            =  0.000000
+Om_Lambda            =  0.763000
+Om_K                 =  0.000000
+Om_m (1-Om_K-Om_L)   =  0.237000
+100 theta (CosmoMC)  =  1.045965
+Age of universe/GYr  =  13.677
+zstar                =  1089.29
+r_s(zstar)/Mpc       =  148.94
+100*theta            =  1.045849
+DA(zstar)/Gpc        =  14.24109
+zdrag                =  1058.94
+r_s(zdrag)/Mpc       =  151.76
+k_D(zstar) Mpc       =  0.1371
+100*theta_D          =  0.160874
+z_EQ (if v_nu=1)     =  3103.69
+k_EQ Mpc (if v_nu=1) =  0.009405
+100*theta_EQ         =  0.874704
+100*theta_rs_EQ      =  0.481617
+tau_recomb/Mpc       =  289.34  tau_now/Mpc =  14530.3
+at z =  0.000 sigma8 (all matter) =  0.7760
+at z =  0.000 sigma8^2_vd/sigma8  =  0.3482
