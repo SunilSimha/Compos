@@ -3,23 +3,14 @@ import os
 import sys
 import const
 
-cambpath = '/home/yanziang/research/software/camb/' #path where CAMB is
-
-#Input parameters.#
-
-def getparameter(): 
-    cosmo['omega_0'] = input('Please input the total density of mass:')
-    cosmo['omega_b'] = input('Please input the density of baryon:')
-    cosmo['omega_c'] = input('Please input the density of CDM:')
-    cosmo['omega_nu'] = input('Please input the density of nutrino')
-    cosmo['omega_k'] = input('Please input the density due to spacetime curvature:')
-    cosmo['h'] = input('Please input the hubble constant:')
-    cosmo['h'] = cosmo['h'] / 100
-    cosmo['T_CMB'] = input('Please input the temperature of CMB:')
+global cambpath, path
+path = const.cosmo['path']
+cambpath = const.cosmo['cambpath'] #path where CAMB is
 
 #write parameters: ombh2, omch2, omnuh2, omk, hubble, temp_cmb.#
 
 def writeparam(cosmo,k_max = 10): 
+    global cambpath,path
     h = cosmo['h']
     hubble = h * 100
     ns = cosmo['n_s']
@@ -68,7 +59,7 @@ def writeparam(cosmo,k_max = 10):
 #write notes to output files.#
 
 def writeoutput(cosmo): 
-    path = const.cosmo['path']
+    global cambpath,path 
     h = cosmo['h']
     hubble = h * 100
     ombh2 = cosmo['omega_b'] * h ** 2

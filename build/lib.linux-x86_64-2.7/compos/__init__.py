@@ -10,5 +10,3 @@ import pyhalofit_camb
 import cambparam
 import callcamb
 import camb_interp
-
-

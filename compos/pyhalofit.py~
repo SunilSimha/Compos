@@ -26,7 +26,7 @@ def Sigma2(R,z = 0,gf = 1):
         y = k
         dt2 = matterps.normalizedmp(k) * d ** 2 * k ** 3 / (2 * np.pi ** 2)
         x = k * R
-        w1 = np.exp(- x*x)
+        w1 = np.exp(- x * x)
         w2 = 2 * x * x * w1
         w3 = 4 * x * x * (1 - x * x) * w1
         sum1 = sum1 + w1 * dt2 / y / t / t
@@ -98,10 +98,7 @@ def deltaq(k,z = 0): #Two halo terms(A2)
     y = k * Rnl
     def funy(x):
         return x / 4 + x ** 2 / 8
-    if (z == 0):
-        deltal = matterps.normalizedmp(k) * k ** 3 / (2 * np.pi ** 2)
-    else:
-        deltal = matterps.matterpsatz(k,z) * k ** 3 / (2 * np.pi ** 2)
+    deltal = matterps.normalizedmp(k,z) * k ** 3 / (2 * np.pi ** 2)
     deltaq = deltal * ((1 + deltal) ** betan / (1 + alphan * deltal)) * np.exp(- funy(y))
     return deltaq
 

@@ -5,20 +5,20 @@ Om_nu h^2            =  0.000000
 Om_Lambda            =  0.682500
 Om_K                 =  0.001500
 Om_m (1-Om_K-Om_L)   =  0.316000
-100 theta (CosmoMC)  =  1.040045
+100 theta (CosmoMC)  =  1.040108
 Age of universe/GYr  =  13.831
 zstar                =  1089.52
-r_s(zstar)/Mpc       =  145.08
-100*theta            =  1.041106
-DA(zstar)/Gpc        =  13.93512
+r_s(zstar)/Mpc       =  145.09
+100*theta            =  1.041168
+DA(zstar)/Gpc        =  13.93513
 zdrag                =  1058.44
-r_s(zdrag)/Mpc       =  147.85
+r_s(zdrag)/Mpc       =  147.86
 k_D(zstar) Mpc       =  0.1410
-100*theta_D          =  0.159890
-z_EQ (if v_nu=1)     =  3434.10
-k_EQ Mpc (if v_nu=1) =  0.010430
-100*theta_EQ         =  0.806053
-100*theta_rs_EQ      =  0.445860
+100*theta_D          =  0.159893
+z_EQ (if v_nu=1)     =  3434.94
+k_EQ Mpc (if v_nu=1) =  0.010432
+100*theta_EQ         =  0.805954
+100*theta_rs_EQ      =  0.445809
 tau_recomb/Mpc       =  281.32  tau_now/Mpc =  14182.7
-at z =  0.000 sigma8 (all matter) =  0.8268
-at z =  0.000 sigma8^2_vd/sigma8  =  0.4365
+at z =  0.000 sigma8 (all matter) =  0.8269
+at z =  0.000 sigma8^2_vd/sigma8  =  0.4366

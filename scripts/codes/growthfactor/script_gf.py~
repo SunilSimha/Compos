@@ -9,7 +9,7 @@ from compos import const, growthfactor
 
 t0 = time.time()
 
-const.initializecosmo()
+const.initializecosmo(.3, 0, 0.67, 2.7255/2.7, omq = 0.7, sigma8 = 0.8288)
 
 a = np.linspace(0.0001,1,500)
 
@@ -18,21 +18,21 @@ g1 = np.zeros(np.size(a))
 for i in range(0,np.size(g1)):
     g1[i] = growthfactor.growfunc_a(a[i])
 
-const.initializecosmo(0.3,0, 0, 0.67, 2.7255/2.7, omq = 0.7, sigma8 = 0.8288 , w_0 = -0.8, w_1 = 0,n_s = 0.96)
+const.initializecosmo(0.3, 0, 0.67, 2.7255/2.7, omq = 0.7, sigma8 = 0.8288 , w_0 = -0.8, w_1 = 0,n_s = 0.96)
 
 #growthfactor.generateDE(-0.8,0)
 g2 = np.zeros(np.size(a))
 for i in range(0,np.size(g1)):
     g2[i] = growthfactor.growfunc_a(a[i])
 
-const.initializecosmo(0.3,0, 0, 0.67, 2.7255/2.7, omq = 0.7, sigma8 = 0.8288 , w_0 = -0.8, w_1 = -0.6 ,n_s = 0.96)
+const.initializecosmo(0.3,0, 0.67, 2.7255/2.7, omq = 0.7, sigma8 = 0.8288 , w_0 = -0.8, w_1 = -0.6 ,n_s = 0.96)
 
 #growthfactor.generateDE(-0.8,-0.6)
 g3 = np.zeros(np.size(a))
 for i in range(0,np.size(g1)):
     g3[i] = growthfactor.growfunc_a(a[i])
 
-const.initializecosmo(0.3,0, 0, 0.67, 2.7255/2.7, omq = 0.7, sigma8 = 0.8288 , w_0 = -0.8, w_1 = 0.6,n_s = 0.96)
+const.initializecosmo(0.3, 0, 0.67, 2.7255/2.7, omq = 0.7, sigma8 = 0.8288 , w_0 = -0.8, w_1 = 0.6,n_s = 0.96)
 
 #growthfactor.generateDE(-0.8,0.6)
 g4 = np.zeros(np.size(a))

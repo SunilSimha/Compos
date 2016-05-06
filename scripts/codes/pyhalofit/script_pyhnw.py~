@@ -9,6 +9,7 @@ from compos import const, growthfactor, matterps, pyhalofit_nw
 #set parameters(as an example)#
 
 const.initializecosmo()
+
 x = np.linspace(-4,1,1000)
 k = 10 ** x
 d2 = growthfactor.growfunc_z(10)
@@ -21,9 +22,9 @@ pyhalofit_nw.supparams()
 np0 = pyhalofit_nw.nlpowerspec_nw(k,0)
 t = np.zeros((2,np.size(k)))
 
-p2 = matterps.normalizedmp(k,10)
-p1 = matterps.normalizedmp(k,5)
-p0 = matterps.normalizedmp(k,0)
+p2 = matterps.normalizedmpnw(k,10)
+p1 = matterps.normalizedmpnw(k,5)
+p0 = matterps.normalizedmpnw(k,0)
 
 mp.loglog(k/const.cosmo['h'],np0,label = 'nonlinear,z=0')
 mp.loglog(k/const.cosmo['h'],p0,label = 'linear,z=0')

@@ -31,11 +31,8 @@ mp.xlabel('$k(h$ $Mpc^{-1}$)')
 
 mp.subplot(122)
 mp.plot(r * 0.7,xi  * (r * 0.7) ** 2 )
-#mp.errorbar(r * 0.7,xi * 0.7 ** 3 * (r * 0.7) ** 2, yerr=err * (r * 0.7) ** 2,fmt = '.')
 mp.xlabel('$r(Mpc/h)$')
 mp.ylabel(r'$r^2\xi (Mpc/h)$')
-#mp.ylim(-5,5)
-mp.text(plottextl + 15,plottextd - 0.7, '$h = 0.7, \Omega_bh^2 = 0.0226, \Omega_ch^2 = 0.112$',fontsize = 15)
 t1 = time.time()
 print'The program lasts ' +str(t1 - t0)+ ' seconds'
 mp.savefig('../../results/matterps/twopcf.jpg', dpi = 200)

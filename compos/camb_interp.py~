@@ -18,7 +18,7 @@ s8 = 0
 def inimp(kmax = 10):
     global f,k,s8
     callcamb.cambbypy(kmax)
-    kp = cambmatterps.readmatterps()
+    kp = callcamb.readmatterps()
     k = kp
     k[0] = kp[0] * const.cosmo['h']
     k[1] = kp[1] / (const.cosmo['h'] ** 3)

@@ -23,7 +23,7 @@ np0 = pyhalofit.nlpowerspec(k,0)
 t = np.zeros((2,np.size(k)))
 
 p2 = matterps.normalizedmp(k,10)
-p1 = matterps.normalizedmpz(k,5)
+p1 = matterps.normalizedmp(k,5)
 p0 = matterps.normalizedmp(k,0)
 
 mp.loglog(k/const.cosmo['h'],np0,label = 'nonlinear,z=0')

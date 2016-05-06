@@ -140,7 +140,7 @@ def matterpsnw(k):
 def normalizedmpnw(k,z = 0): 
     global s8
     sigma8()
-    normalp = matterpsnw(k)
+    normalp = matterpsnw(k) * (s8_given / s8) ** 2
     if z == 0:
         return normalp
     else:

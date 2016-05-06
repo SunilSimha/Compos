@@ -20,7 +20,7 @@ def initialize(kmax = 10):
 
 #call a CAMB routine#
 
-def cambbypy(kmax = 10): #Call CAMB by python code.
+def cambbypy(kmax = 10): 
     global path,cambpath
     initialize(kmax)
     h = const.cosmo['h']
@@ -54,8 +54,9 @@ def readtransfunction():
     kt = np.transpose(kt)
     return kt
 
+#Read matter power spectrum calculated directly by CAMB.
 
-def readmatterps(): #Read matter power spectrum calculated directly by CAMB.
+def readmatterps(): 
     path = const.cosmo['path']
     cpath = os.path.join(path,'scripts/results/callcamb/spectra')
     os.chdir(cpath)
@@ -69,6 +70,8 @@ def readmatterps(): #Read matter power spectrum calculated directly by CAMB.
     kp = np.loadtxt('test('+str(ombh2)+','+str(omch2)+','+str(omnuh2)+','+str(omk)+','+str(hubble)+','+str(temp_cmb)+')_matterpower.dat')
     kp = np.transpose(kp)
     return kp
+
+#Read sigma_8 calculated directly by CAMB.
 
 def readsigma8():
     global path
