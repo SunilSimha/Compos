@@ -17,8 +17,8 @@ cosmo = {'omega_0': 0.316, 	# Total density of mass
          'sigma8': 0.8344, 	# Total fluctuation amplitude within 8 Mpc h^(-1)
          'n_s': 1, 		# Power index
          'b_g': 1.1, 		# Bias on MPS
-         'path': '/home/yanza15/research/software/Compos',  # path of compos
-         'cambpath': '/home/yanza15/research/software/camb/'  # path of camb
+         'path': '/home/sunil/Python/Compos',  # path of compos
+         'cambpath': '/home/sunil/Python/CAMB-0.1.6.1/'  # path of camb
          }
 
 # Initialize a cosmological model
@@ -44,8 +44,8 @@ def initializecosmo(om0=0.316, omb=0.049, H=67.11, T_CMB=2.728, omq=0.6825,
     cosmo['n_s'] = n_s
     cosmo['sigma8'] = sigma8
     cosmo['b_g'] = b_g
-    import pyhalofit
-    import camb_interp
+    from . import pyhalofit
+    from . import camb_interp
     if nonlinear == 1:
         # Initialize a nonlinear matter power spectrum calculation routine
         pyhalofit.supparams(z)

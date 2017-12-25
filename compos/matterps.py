@@ -6,9 +6,9 @@
 from __future__ import division
 import numpy as np
 import scipy.integrate as integ
-import const
-import transfunction as tf
-import growthfactor
+from . import const
+from . import transfunction as tf
+from . import growthfactor
 
 # global parameters#
 

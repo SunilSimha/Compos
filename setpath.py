@@ -5,7 +5,7 @@ import shutil
 compospath = os.getcwd()
 
 # path of camb, set by user
-cambpath = '/home/yanza15/research/software/camb/'
+cambpath = '/home/sunil/Python/CAMB-0.1.6.1/'
 
 con = open('./compos/const.py', 'r')
 

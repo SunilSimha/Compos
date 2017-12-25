@@ -4,7 +4,7 @@ from __future__ import division
 import numpy as np
 from scipy.integrate import odeint
 import scipy.integrate as integrate
-import const
+from . import const
 
 # Return a with respect to z
 

@@ -3,8 +3,8 @@
 
 import numpy as np
 import os
-import const
-import cambparam
+from . import const
+from . import cambparam
 
 # write into a param.ini file.
 

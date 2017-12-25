@@ -1,6 +1,6 @@
 # This code write a 'param.ini' file for initializing a CAMB routine.
 import os
-import const
+from . import const
 
 global cambpath, path
 path = const.cosmo['path']

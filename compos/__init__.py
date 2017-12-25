@@ -1,12 +1,12 @@
-import const
+from . import const
 
-import transfunction as tf
-import matterps as mps
-import twopcf 
-import growthfactor as gf
-import pyhalofit as pyh
-import pyhalofit_nw 
-import pyhalofit_camb
-import cambparam
-import callcamb
-import camb_interp
+from . import transfunction as tf
+from . import matterps as mps
+from . import twopcf 
+from . import growthfactor as gf
+from . import pyhalofit as pyh
+from . import pyhalofit_nw 
+from . import pyhalofit_camb
+from . import cambparam
+from . import callcamb
+from . import camb_interp

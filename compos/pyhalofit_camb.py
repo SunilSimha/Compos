@@ -5,9 +5,9 @@
 
 from __future__ import division
 import numpy as np
-import matterps
-import growthfactor
-import camb_interp
+from . import matterps
+from . import growthfactor
+from . import camb_interp
 
 
 def Sigma2(R, z=0, gf=1):

@@ -1,5 +1,5 @@
 README.txt
-setuppackages.py
+setup.py
 Compos.egg-info/PKG-INFO
 Compos.egg-info/SOURCES.txt
 Compos.egg-info/dependency_links.txt

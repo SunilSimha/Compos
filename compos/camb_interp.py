@@ -5,9 +5,9 @@ import numpy as np
 from scipy import interpolate
 import scipy.integrate as integ
 
-import callcamb
-import growthfactor
-import const
+from . import callcamb
+from . import growthfactor
+from . import const
 
 f = interpolate.UnivariateSpline([1, 2], [1, 2], k=1)
 
@@ -97,5 +97,5 @@ def kstar():
                  delta2[i] * (3 * j1((8) * k[0][i]) /
                               ((8) * k[0][i])) ** 2 * (k[0][i] - k[0][i-1])
     s_8 = np.sqrt(sigma2)
-    print s_8
+    print(s_8)
     return kstar

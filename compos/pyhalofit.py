@@ -4,8 +4,8 @@
 
 from __future__ import division
 import numpy as np
-import matterps
-import growthfactor
+from . import matterps
+from . import growthfactor
 
 
 def Sigma2(R, z=0, gf=1):
