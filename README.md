@@ -1,8 +1,12 @@
 # Compos
-This is a instruction document of COMPOS (COdes for Matter POwer Spectrum) written by Ziang Yan. It is written in Python.
+This is a instruction document of COMPOS (COdes for Matter POwer Spectrum) written by Ziang Yan. It is written in Python. This fork (me Sunil Simha) is mainly because the software had gotten out of date and required some cleanup for it to install smoothly.
 
-This is the version July 2015.
+# Changes
+* `setuppackages.py` has been renamed `setup.py` and the previously existing file of that name has been deleted. `setuppath.py` now runs in the renamed file.
+* All `import` function calls for packages in  `compos` have been modified to `from . import`
+* Minor fixes to accommodate change in `Python` syntax.
 
+This is the version July 2015. (forked on Dec 2017)
 Prerequisites:
 =============
         
@@ -14,7 +18,7 @@ Installing:
 ===========
         
            Before installation, first edit setpath.py. Type the path of CAMB package (for example: '/home/software/camb')in your computer. If you do not have CAMB, then leave it as "''".
-           Install: $sudo python setup.py
+           Install: $python setup.py install
 
 Running:
 ========
