@@ -31,7 +31,7 @@ mp.plot(r * 0.7, xi * (r * 0.7) ** 2)
 mp.xlabel('$r(Mpc/h)$')
 mp.ylabel(r'$r^2\xi (Mpc/h)$')
 t1 = time.time()
-print 'The program lasts ' + str(t1 - t0) + ' seconds'
+print('The program lasts ' + str(t1 - t0) + ' seconds')
 mp.savefig('../../results/matterps/twopcf.jpg', dpi=200)
 mp.show()
 
