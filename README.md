@@ -6,7 +6,7 @@ This is a instruction document of COMPOS (COdes for Matter POwer Spectrum) writt
 * All `import` function calls for packages in  `compos` have been modified to `from . import`
 * Minor fixes to accommodate change in `Python` syntax.
 
-This is the version July 2015. (forked on Dec 2017)
+This is the version July 2015. (forked in Dec 2017)
 Prerequisites:
 =============
         
