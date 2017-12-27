@@ -10,7 +10,7 @@ cosmo = {'omega_0': 0.316, 	# Total density of mass
          'omega_q': 0.6825, 	# Density of DE
          'omega_nu': 0, 	# Density of neutrino
          'omega_k': 0, 	# Density of curvature
-         'h': 0.11, 		# Hubble constant
+         'h': 0.6711, 		# Hubble constant
          'T_CMB': 2.728/2.7, 	# Temperature of CMB. Normalized to 2.7K
          'w_0': -1, 		# DE state eq wrt z as w_0+w_1 * z / (1 + z)
          'w_1': 0,
