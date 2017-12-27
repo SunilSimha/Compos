@@ -14,7 +14,7 @@ from . import growthfactor
 
 global c, s8
 s8 = 0
-c = 2.998 * 10 ** 8  # the velocity of light
+c = 2.99792458e8  # the velocity of light in m/s
 
 # density of mass at redshift z#
 
